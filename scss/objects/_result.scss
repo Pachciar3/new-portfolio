@@ -1,0 +1,39 @@
+.result {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // color: #fff;
+  padding: 20px;
+  font-size: 2.5rem;
+  align-items: center;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: 0.2s linear;
+  cursor: pointer;
+  color: #fff;
+  &__icon {
+    width: 50px;
+    align-self: flex-end;
+    fill: #fff;
+  }
+  &__text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  &--success {
+    background-color: $success-color;
+  }
+  &--danger {
+    background-color: $danger-color;
+  }
+  &.is-active {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

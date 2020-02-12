@@ -1,0 +1,32 @@
+.portfolio {
+  padding: 30px 5px;
+  &__title {
+    font-size: 3rem;
+    color: $secondary-color;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 550px) {
+  .portfolio {
+    padding: 30px 15px;
+    // &__item {
+    //   margin: 0px 10px 40px 10px;
+    // }
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio {
+    &__title {
+      font-size: 3.6rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio {
+    padding: 30px 0px;
+  }
+}

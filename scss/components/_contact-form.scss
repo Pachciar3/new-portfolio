@@ -1,0 +1,94 @@
+.contact-form {
+  padding: 30px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  &__field {
+    border: 0px;
+    display: flex;
+    width: 48%;
+    margin-bottom: 15px;
+    &--textarea {
+      width: 100%;
+    }
+    ::placeholder {
+      font-family: $font1;
+      color: #fff;
+    }
+  }
+  &__label {
+    font-size: 2.3rem;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  &__input {
+    font-size: 1.7rem;
+    color: #fff;
+    width: 100%;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 13px;
+    transition: 0.2s;
+    &--textarea {
+      height: 130px;
+      resize: none;
+    }
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &__error-message {
+    color: $danger-color;
+    // font-weight: 600;
+    // font-weight: 700;
+    padding: 2px 0px 0px 0px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  // &__send-btn {
+  //   // font-family: $font1;
+  //   background-color: $danger-color-800;
+  //   color: #fff;
+  //   padding: 8px 20px;
+  //   text-transform: uppercase;
+  //   font-size: 2rem;
+  //   letter-spacing: 1px;
+  //   transition: 0.2s;
+  //   cursor: pointer;
+  //   &:hover {
+  //     background-color: $danger-color;
+  //   }
+  // }
+}
+
+@media (min-width: 550px) {
+  .contact-form {
+    padding: 30px 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-form {
+    &__label {
+      font-size: 2.5rem;
+    }
+    &__input {
+      font-size: 1.8rem;
+      padding: 15px;
+      &--textarea {
+        height: 150px;
+      }
+    }
+  }
+}
+
+// @media (min-width: 550px) {
+//   .contact-form {
+//     padding: 30px 15px;
+//   }
+// }

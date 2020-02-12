@@ -1,0 +1,15 @@
+@function primary-color($number: 1) {
+  @return rgba(21, 35, 57, $number);
+}
+
+@function secondary-color($number: 1) {
+  @return rgba(38, 175, 234, $number);
+}
+
+@function danger-color($number: 1) {
+  @return rgba(202, 23, 53, $number);
+}
+
+@function warning-color($number: 1) {
+  @return rgba(255, 236, 67, $number);
+}

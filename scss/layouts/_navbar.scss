@@ -1,0 +1,107 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+  border-bottom: 5px solid $secondary-color;
+  &__con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0px 10px;
+    transition: 0.2s ease-in-out;
+    &--short {
+      height: 70px;
+      padding: 0px 5px;
+    }
+  }
+  &__logo {
+    transition: 0.2s ease-in-out;
+    height: 75px;
+    // width: auto;
+  }
+  &__con--short &__logo {
+    height: 63px;
+  }
+  &__logo-img {
+    height: 100%;
+  }
+  &__burger-btn {
+    width: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    svg {
+      fill: $secondary-color;
+    }
+    // border: 0px;
+  }
+  &__nav-list {
+    // display: none;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    right: 0;
+    // height: calc(100vh - 90px);
+    background-color: $primary-color;
+    transform: scaleY(0);
+    transition: 0.2s ease-in-out;
+    transform-origin: top;
+    opacity: 0;
+    padding: 25px 15px;
+    border-bottom: 5px solid $secondary-color;
+    &.is-active {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+  &__con--short &__nav-list {
+    top: 75px;
+  }
+  &__nav-link {
+    display: block;
+    text-decoration: none;
+    font-size: 3rem;
+    transition: 0.2s linear;
+    color: #fff;
+    text-align: center;
+    line-height: 1.7;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    &__burger-btn {
+      display: none;
+    }
+    &__nav-list {
+      display: flex;
+      position: relative;
+      transform: scaleY(1);
+      padding: 0px;
+      top: 0;
+      background-color: transparent;
+      opacity: 1;
+      border-bottom: 0px;
+    }
+    &__con--short &__nav-list {
+      top: 0;
+    }
+    &__nav-link {
+      color: $primary-color;
+      line-height: 1;
+      padding: 0px 20px;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}

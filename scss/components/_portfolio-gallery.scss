@@ -1,0 +1,94 @@
+.portfolio-gallery {
+  display: flex;
+  // flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 430px;
+  margin: 0 auto;
+  &__item {
+    // max-width: 420px;
+    box-shadow: 1px 1px 7px 0px $secondary-color;
+    padding: 10px;
+    margin: 0px 10px 40px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__item-img {
+    width: 100%;
+  }
+  &__item-title {
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
+  &__item-line {
+    border-bottom: 1px solid $secondary-color;
+    margin-bottom: 7px;
+  }
+  &__technologies {
+    color: $secondary-color;
+    font-size: 1.7rem;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+  &__item-desc {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    flex-grow: 1;
+  }
+  &__item-btns {
+    display: flex;
+    // justify-content: space-evenly;
+  }
+  &__item-btn {
+    width: 100%;
+    margin: 0px 10px;
+    text-transform: uppercase;
+    // background-color: $primary-color;
+    // border: 3px solid $primary-color;
+    font-weight: 600;
+    // color: #fff;
+    // padding: 10px 5px;
+    // font-size: 2rem;
+    // transition: 0.3s;
+    // letter-spacing: 1px;
+    // text-align: center;
+    // text-decoration: none;
+    // &:hover {
+    // background-color: #fff;
+    // color: $primary-color;
+    // border: 3px solid $primary-color;
+    // }
+  }
+}
+
+@media (min-width: 798px) {
+  .portfolio-gallery {
+    margin: initial;
+    max-width: 100%;
+    justify-content: space-evenly;
+    &__item {
+      max-width: 360px;
+      // width: 50%;
+      // margin: 10px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-gallery {
+    &__item {
+      max-width: 440px;
+      padding: 20px;
+      // width: 50%;
+      // margin: 10px;
+    }
+    &__item-title {
+      font-size: 3rem;
+    }
+    &__item-desc {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    &__item-btn {
+      font-size: 2rem;
+    }
+  }
+}

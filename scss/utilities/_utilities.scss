@@ -1,0 +1,32 @@
+.u-white-color {
+  color: #fff;
+}
+.u-warning-color {
+  color: $warning-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// .container--half {
+//   // display: flex;
+// }
+
+.container__el {
+  width: 100%;
+}
+@media (min-width: 880px) {
+  .container--half {
+    display: flex;
+  }
+  .container__el {
+    width: 50%;
+  }
+}
+.flex-align-right {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
