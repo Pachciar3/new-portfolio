@@ -49,8 +49,11 @@
     </div>
     <header class="header" data-section="#start">
       <div class="header__welcome container">
-        <h1 class="header__title">Dawid Pachciarek</h1>
-        <p class="header__subtitle">Tworzę <span class="u-warning-color">strony internetowe</span> z
+        <h1 class="header__title hide" data-animation="fadeInRight" data-animation-duration="0.95s">Dawid Pachciarek
+        </h1>
+        <p class="header__subtitle hide" data-animation="fadeInLeft" data-animation-duration="0.95s">Tworzę <span
+            class="u-warning-color">strony
+            internetowe</span> z
           <span class="u-white-color vertical-text-slider" id="vertical-slider">
             <strong class="vertical-text-slider__el">HTML</strong>
             <strong class="vertical-text-slider__el">CSS</strong>
@@ -61,16 +64,18 @@
         </p>
       </div>
       <div class="header__btn-con container">
-        <a href="#contact" class="btn btn--danger btn--big">Skontaktuj się</a>
+        <a href="#contact" class="btn btn--danger btn--big hide" data-animation="bounce"
+          data-animation-duration="0.8s">Skontaktuj się</a>
       </div>
     </header>
     <section class="section" data-section="#about-me">
       <div class="section__starter" id="about-me"></div>
       <div class="about-me container">
-        <div class="about-me__left"><img src="images/iam.jpg" alt="Dawid Pachciarek" class="about-me__photo"></div>
+        <div class="about-me__left"><img src="images/iam.jpg" alt="Dawid Pachciarek" class="about-me__photo"
+            data-animation="fadeInLeft" data-animation-init="top" data-animation-duration="0.8s"></div>
         <div class="about-me__right">
-          <h2 class="about-me__title">O mnie</h2>
-          <div class="about-me__desc">
+          <h2 class="about-me__title" data-animation="fadeInUp">O mnie</h2>
+          <div class="about-me__desc hide" data-animation="fadeInUp" data-animation-init="top">
             <p>Mam na imię Dawid i jestem <strong>Front-end Developerem</strong>. Lubię cały czas się rozwijać.
               Każde zlecenie jest dla mnie okazją do nauki nowych
               umiejętności. </p>
@@ -93,8 +98,8 @@
       <div class="section__starter" id="skills"></div>
       <div class="section__image" style="background-image: url(images/code.jpg);"></div>
       <div class="skills container">
-        <h2 class="skills__title">Korzystam z</h2>
-        <ul class="skills__list">
+        <h2 class="skills__title hide" data-animation="fadeInUp">Korzystam z</h2>
+        <ul class="skills__list hide" data-animation="fadeInUp">
           <li class="skills__item">
             <div class="skills__item-cnt-image">
               <svg class="skills__item-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
@@ -326,8 +331,8 @@
             <h3 class="skills__item-name">PSD2HTML</h3>
           </li>
         </ul>
-        <h2 class="skills__title">Dopiero zaczynam</h2>
-        <ul class="skills__list">
+        <h2 class="skills__title hide" data-animation="fadeInUp">Dopiero zaczynam</h2>
+        <ul class="skills__list hide" data-animation="fadeInUp">
           <li class="skills__item">
             <div class="skills__item-cnt-image">
               <svg class="skills__item-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -365,7 +370,7 @@
       <div class="portfolio container">
         <h2 class="portfolio__title">Moje projekty</h2>
         <div class="portfolio-gallery">
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInRight">
             <img src="images/portfolio/kiedy_wolne.png" alt="Projekt kiedy-wolne.pl"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">
@@ -385,7 +390,7 @@
             </div>
           </div>
           <!-- </div> -->
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInLeft">
             <img src="images/portfolio/sunstone.png" alt="Projekt sun-stone-international.pl"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">
@@ -403,36 +408,38 @@
                 class="portfolio-gallery__item-btn btn btn--primary-outlined">Live</a>
             </div>
           </div>
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInRight">
             <img src="images/portfolio/portfolio.png" alt="Projekt portfolia frontend developera"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">
               Aktualne portfolio
             </h3>
             <div class="portfolio-gallery__item-line"></div>
-            <p class="portfolio-gallery__technologies">HTML, CSS, JS, SASS, AJAX(XHR), PHP</p>
+            <p class="portfolio-gallery__technologies">HTML, CSS, JS, SASS, AJAX(FETCH), PHP</p>
             <p class="portfolio-gallery__item-desc">Poprostu moje portfolio. Oprócz informacji o moich umiejętnościach i
               galerii projektów posiada formularz kontaktowy stworzony w języku js i php. Formularz działa w technologii
               AJAX
               co umożliwiwa mu działanie bez potrzeby przeładowywania strony.</p>
             <div class="portfolio-gallery__item-btns">
-              <a href="#" class="portfolio-gallery__item-btn btn btn--primary-outlined">Github</a>
+              <a href="https://github.com/Pachciar3/new-portfolio"
+                class="portfolio-gallery__item-btn btn btn--primary-outlined">Github</a>
               <a href="http://dawid-pachciarek.pl/"
                 class="portfolio-gallery__item-btn btn btn--primary-outlined">Live</a>
             </div>
           </div>
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInLeft">
             <img src="images/portfolio/utrudnienia_drogowe.png" alt="Projekt Utrudnienia drogowe"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">
               Utrudnienia drogowe
             </h3>
             <div class="portfolio-gallery__item-line"></div>
-            <p class="portfolio-gallery__technologies">HTML, CSS, JS, SASS, AJAX(FETCH), PHP</p>
+            <p class="portfolio-gallery__technologies">HTML, CSS, JS, SASS, AJAX(XHR), PHP</p>
             <p class="portfolio-gallery__item-desc">Aplikacja internetowa umożliwiająca sprawdzenie utrudnień na
               autostradach, drogach ekspresowych i krajowych. Umożliwia filtracje po województwach, szukanie po wybranej
               frazie oraz po wybranej drodze. Projekt został wykonany w technologii AJAX dzięki czemu strona nie musi
-              się odświerzać. Dane pobierane są z strony GDDKIA w postaci pliku xml i zamieniane przez serwer PHP na
+              się odświerzać po wysłaniu zapytania. Dane pobierane są z strony GDDKIA w postaci pliku xml i zamieniane
+              przez skrypt PHP na
               format json.</p>
             <div class="portfolio-gallery__item-btns">
               <a href="https://github.com/Pachciar3/road-obstructions"
@@ -441,7 +448,7 @@
                 class="portfolio-gallery__item-btn btn btn--primary-outlined">Live</a>
             </div>
           </div>
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInRight">
             <img src="images/portfolio/old_portfolio.png" alt="Projekt portfolia frontend developera"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">
@@ -454,13 +461,13 @@
               je
               zmienić.</p>
             <div class="portfolio-gallery__item-btns">
-              <a href="https://github.com/Pachciar3/road-obstructions"
+              <a href="https://github.com/Pachciar3/portfolio"
                 class="portfolio-gallery__item-btn btn btn--primary-outlined">Github</a>
-              <a href="https://kiedy-wolne.pl/examples/utrudnienia_drogowe/"
+              <a href="https://pachciar3.github.io/portfolio/"
                 class="portfolio-gallery__item-btn btn btn--primary-outlined">Live</a>
             </div>
           </div>
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInLeft">
             <img src="images/portfolio/pokoje_goscinne.png" alt="Projekt pokojegoscinne.opoczno.pl"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">
@@ -479,7 +486,7 @@
                 class="portfolio-gallery__item-btn btn btn--primary-outlined">Live</a>
             </div>
           </div>
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInRight">
             <img src="images/portfolio/todolist.png" alt="Projekt To-do Application"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">
@@ -496,7 +503,7 @@
                 class="portfolio-gallery__item-btn btn btn--primary-outlined">Live</a>
             </div>
           </div>
-          <div class="portfolio-gallery__item">
+          <div class="portfolio-gallery__item hide" data-animation="fadeInLeft">
             <img src="images/portfolio/sarabanda.png" alt="Projekt Sarabanda(psd2html)"
               class="portfolio-gallery__item-img">
             <h3 class="portfolio-gallery__item-title">

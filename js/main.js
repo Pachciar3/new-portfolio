@@ -139,10 +139,57 @@ contactForm.addEventListener('submit', e => {
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-  console.log('ok');
+  // console.log('ok');
   if (window.scrollY > 200) {
     navbar.classList.add('navbar__con--short');
   } else {
     navbar.classList.remove('navbar__con--short');
   }
 });
+
+//asd
+const getPosition = element => {
+  let xPosition = 0;
+  let yPosition = 0;
+
+  while (element) {
+    xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+    yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+    element = element.offsetParent;
+  }
+
+  return { x: xPosition, y: yPosition };
+}
+const items = document.querySelectorAll('*[data-animation]');
+for (let i = 0; i < items.length; i++) {
+  if (items[i].hasAttribute("data-animation")) items[i].classList.add('hide');
+}
+const checkingAnimations = () => {
+  for (let i = 0; i < items.length; i++) {
+    if (i === 4) {
+      console.log(window.scrollY, getPosition(items[i]).y + (items[i].offsetHeight / 2) - window.innerHeight, items[i]);
+    }
+    const initialization = items[i].getAttribute("data-animation-init") ? items[i].getAttribute("data-animation-init") : "middle";
+    let elementSize;
+    switch (initialization) {
+      case "middle":
+        elementSize = items[i].offsetHeight / 2;
+        break;
+      case "top":
+        elementSize = 0;
+        break;
+      case "bottom":
+        elementSize = items[i].offsetHeight;
+        break;
+    }
+    if (window.scrollY > getPosition(items[i]).y + elementSize - window.innerHeight) {
+      const className = items[i].getAttribute("data-animation");
+      const duration = items[i].getAttribute("data-animation-duration") ? items[i].getAttribute("data-animation-duration") : "0.5s";
+      items[i].classList.remove('hide');
+      items[i].classList.add(className);
+      items[i].style.animationDuration = duration;
+    }
+  }
+}
+checkingAnimations();
+document.addEventListener('scroll', checkingAnimations);
