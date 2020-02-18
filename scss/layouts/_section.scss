@@ -2,8 +2,8 @@
   position: relative;
   &__starter::before {
     display: block;
-    height: 95px;
-    margin-top: -95px;
+    height: $navbarHeightShort;
+    margin-top: -$navbarHeightShort;
     content: "";
     // width: 100%;
   }

@@ -5,16 +5,16 @@
   right: 0;
   background-color: #fff;
   z-index: 999;
-  border-bottom: 5px solid $secondary-color;
+  border-bottom: $navbarBorderSize solid $secondary-color;
   &__con {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: $navbarHeight;
     padding: 0px 10px;
     transition: 0.2s ease-in-out;
     &--short {
-      height: 70px;
+      height: $navbarHeightShort;
       padding: 0px 5px;
     }
   }
